@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+		<link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+		<link rel="stylesheet" href="style.css">
+		<title>Ansell Yuen</title>
+		<link rel="shortcut icon" type="image/ico" href="resources/favicon.ico"/>
+		<!-- navbar -->
+		<div id="headflex">
+			<div class="logocontainer">
+				<a href="" class="logo">
+					<img src="resources/logo2.png" alt="Ansell Yuen Logo" id="logo" width=60% height=60%>
+				</a>
+				<a href="" class="logo">
+					<img src="resources/logo.png" alt="Ansell Yuen Logo" id="logohot" width=60% >
+				</a>
+			</div>
+			<div id="navbar">		
+				<a href="" ><span data-content="Home" class="hotlink">Home</span></a>
+
+                <a href="Portfolio/index.html"><span data-content="Portfolio">Portfolio</span></a>
+				<a href="Resume/index.html"><span data-content="Resume">Resume</span></a>
+				
+			</div>
+		</div>
+		
+		<!-- navbar -->
+	</head>
+	
+	<body>
+		<div id="pagecontainer">
+			<div id="preintro">
+				
+					<a href="https://www.linkedin.com/in/ansellyuen" id="name"><p>Ansell Yuen<img src="resources/li_in.png" id="liin"></p></a>
+				
+				
+			</div>
+			<div id="intro">
+				
+				<div class="row">
+					<div class="column">
+						<div class="highlights" id="university">
+					
+							<p><h3>University</h3></p>
+							<p><h2>Saint Louis University</h2></p>
+						</div>
+						<div class="highlights" id="graduate">
+						
+							<p><h3>Exp. Graduation</h3></p>
+							<p><h2>December 2021</h2></p>
+						</div>
+					</div>
+				</div>
+				
+					<div class="column" id="rcol">
+						<div class="highlights" id="major">
+							<p><h3>Major</h3></p>
+							<p><h2>Information Technology Management</h2></p>
+						</div>
+						<div class="highlights" id="minor">
+							<p><h3>Minor</h3></p>
+							<p><h2>Visual Communications</h2></p>
+						</div>
+					</div>
+				
+			</div>
+			<div id="plinks_row">
+				<div id="plinks">
+				
+						<a href="portfolio/index.html#1" class="highlights"><img src="resources/sjh_hot1.png" class="hot"><img src="resources/sjh.png"></a>
+				
+						<a href="portfolio/index.html#2" class="highlights"><img src="resources/torleado_logo_hot1.png" class="hot"><img src="resources/torleado_logo.png"></a>
+				
+				
+						<a href="portfolio/index.html#3" class="highlights"><img src="resources/purina_hot1.png" class="hot"><img src="resources/purina.png"></a>
+						<div class="spacer"></div>
+				
+				</div>
+				<div id="stamp">
+					<img src="resources/stamp.png">
+				</div>
+			</div>
+		</div>
+		<footer>
+			<p id="copy">&copy;2021 Ansell Yuen</p>
+		</footer>
+	</body>
+	<script>
+		for (i = 0; i < navLink.length; i++) {
+				navLink[i].addEventListener("click", function() {
+					var link = this.dataset.link;
+					var sectionId = document.getElementById(link);
+
+					var divToOpen = sectionId.querySelector(".collapsible");
+					
+					divToOpen.classList.toggle("active");
+					var content = divToOpen.nextElementSibling;
+					if (content.style.display === "block") {
+					content.style.display = "none";
+					} else {
+					content.style.display = "block";
+					}
+				});
+				}
+	</script>
+</html>
