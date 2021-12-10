@@ -74,13 +74,15 @@
 									Flowstate interprets the process models to generate screens automatically, allowing users to spend more time refining their designs versus building their screens.
 								</p>
 								<img src="resources/flowstate2.png">
-								<p>
-									<h2>Key Features and Designs</h2>
-								</p>
+								<p><h2>Key Features and Designs</h2></p>
 								<p class="desc">
 									<p>&#8226; Sidebar for commonly used assets, shapes, and information</p>
 									<p>&#8226; Easily continue process flows with quick access button at the end of open elements</p>
 									<p>&#8226; Minimal design to keep focus on the workspace</p>
+								</p>
+								<p><h2>Key Considerations for design</h2></p>
+								<p>
+									
 								</p>
 							</div>
 						</div>
@@ -330,23 +332,30 @@
 				}
 			}
 			}
-			if (window.location.href.indexOf('#1') > 0) {
+			if (window.location.href.indexOf('#1')) {
 					acc[0].classList.add("active");
 					var panel = acc[0].nextElementSibling;
 					var ht = document.getElementById('bat1');
 					panel.style.maxHeight = 2*panel.scrollHeight + 'px';
 
 				}
-				else if (window.location.href.indexOf('#2')>0){
+				else if (window.location.href.indexOf('#2')){
 					acc[1].classList.add("active");
 					var panel = acc[1].nextElementSibling;
 					var ht = panel.scrollHeight;
 					panel.style.maxHeight = 2*panel.scrollHeight + 'px';
 
 				}
-				else if (window.location.href.indexOf('#3')>0){
+				else if (window.location.href.indexOf('#3')){
 					acc[2].classList.add("active");
 					var panel = acc[2].nextElementSibling;
+					var ht = panel.scrollHeight;
+					panel.style.maxHeight = 3*panel.scrollHeight + 'px';
+
+				}
+				else if (window.location.href.indexOf('#4')){
+					acc[3].classList.add("active");
+					var panel = acc[3].nextElementSibling;
 					var ht = panel.scrollHeight;
 					panel.style.maxHeight = 3*panel.scrollHeight + 'px';
 
