@@ -222,6 +222,7 @@ body p{
 #plinks a{
 	background-color:rgb(240, 240, 240);
 	height: min-content;
+	width: auto;
 	overflow: hidden;
 	display: inline-block;
 	transition: 0.5s ease;

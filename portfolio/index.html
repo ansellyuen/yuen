@@ -81,8 +81,10 @@
 									<p>&#8226; Minimal design to keep focus on the workspace</p>
 								</p>
 								<p><h2>Key Considerations for design</h2></p>
-								<p>
-									
+								<p class="desc">
+									<p>&#8226; Allow designers to focus on refining designs versus building screens</p>
+									<p>&#8226; Less clicks needed to perform commonly used fuctions</p>
+									<p>&#8226; Keeping the app open-ended for all different use cases</p>
 								</p>
 							</div>
 						</div>
@@ -336,7 +338,7 @@
 					acc[0].classList.add("active");
 					var panel = acc[0].nextElementSibling;
 					var ht = document.getElementById('bat1');
-					panel.style.maxHeight = 2*panel.scrollHeight + 'px';
+					panel.style.maxHeight = 3*panel.scrollHeight + 'px';
 
 				}
 				else if (window.location.href.indexOf('#2')){
@@ -413,6 +415,9 @@
 				} 
 				else if (document.getElementById("tab3").classList.contains("active")){
 					group = document.getElementsByClassName("group")[2];
+				} 
+				else if (document.getElementById("tab3").classList.contains("active")){
+					group = document.getElementsByClassName("group")[3];
 				} 
 				group.style.display = "block";
 
