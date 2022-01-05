@@ -92,30 +92,6 @@ body p{
 	text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #preintro{
 	margin-top:2.5em;
 	
@@ -268,6 +244,20 @@ footer{
 	
 }
 /* portfolio */
+
+.gif{
+	width:80%;
+	margin-left:auto;
+	margin-right: 2em;
+	padding: 1em;
+	background-color: rgb(250, 250, 250);
+}
+#demo_fs{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width:90%;
+}
 h2{
 	background-color: inherit;
 	font-family: 'Nunito Sans';

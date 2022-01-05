@@ -51,7 +51,7 @@
 								<p>
 									<h3><img src="resources/link.png" class="link"><a href="https://hackathons.nanogiants.de/">Designed for Nanogiants Hackathon in September 2021 for the UI/UX category.</a></h3>
 								</p>
-								<p><img src="resources/flowstate1.png" id="flowstate"></p>
+								<p><img src="resources/flowstate.png" id="flowstate"></p>
 						
 								<p>
 									<h2>Tools Used</h2>
@@ -65,27 +65,40 @@
 									<p>&#8226; User flow is the base for every UI</p>
 									<p>&#8226; Creation of UI takes time and effort</p>
 									<p class="desc">Build / Design a tool that creates a user interface, based on a user flow.</p>
-								
-								<p>
+									
+									<img src="resources/flowstate_demo1.gif"  id="demo_fs" class="gif">
+									<p>
 									<h2>What Flowstate does</h2>
 								</p>
 								<p class="desc">
 									Flowstate creates a flexible workspace for users to design process models with an intuitive interface and features to optimize the work flow for users.
 									Flowstate interprets the process models to generate screens automatically, allowing users to spend more time refining their designs versus building their screens.
 								</p>
-								<img src="resources/flowstate2.png">
-								<p><h2>Key Features and Designs</h2></p>
-								<p class="desc">
-									<p>&#8226; Sidebar for commonly used assets, shapes, and information</p>
-									<p>&#8226; Easily continue process flows with quick access button at the end of open elements</p>
-									<p>&#8226; Minimal design to keep focus on the workspace</p>
-								</p>
-								<p><h2>Key Considerations for design</h2></p>
-								<p class="desc">
-									<p>&#8226; Allow designers to focus on refining designs versus building screens</p>
-									<p>&#8226; Less clicks needed to perform commonly used fuctions</p>
-									<p>&#8226; Keeping the app open-ended for all different use cases</p>
-								</p>
+								<div class="row">
+									<div class="column">
+										<p><h2>Key Features and Designs</h2></p>
+										<p class="desc">
+											<p>&#8226; Sidebar for commonly used assets, shapes, and information</p>
+											<p>&#8226; Easily continue process flows with quick access button at the end of open elements</p>
+											<p>&#8226; Minimal design to keep focus on the workspace</p>
+										</p>
+										
+										
+										<p><h2>Key Considerations for Design</h2></p>
+										<p class="desc">
+											<p>&#8226; Allow designers to focus on refining designs versus building screens</p>
+											<p>&#8226; Less clicks needed to perform commonly used fuctions</p>
+											<p>&#8226; Keeping the app open-ended for all different use cases</p>
+										</p>
+									</div>
+									<div class="column" id="rcol">
+										<img src="resources/flowstate_demo.gif" class="gif" >
+										
+									</div>
+								</div>
+								
+								
+								
 							</div>
 						</div>
 					</section>
@@ -316,53 +329,58 @@
 			var i;
 				
 			for (i = 0; i < acc.length; i++) {
-			acc[i].onclick = function() {
-				if(this.classList.contains("active")){
-				this.classList.remove("active");
-				var panel =this.nextElementSibling;
-				panel.style.maxHeight = null;
-				}
-				else{
-				var k;
-				for(k=0;k<acc.length;k++){
-					acc[k].classList.remove("active");
-					acc[k].nextElementSibling.style.maxHeight = null;
-				}
-				this.classList.add("active");
-				var panel = this.nextElementSibling;
-				panel.style.maxHeight = panel.scrollHeight + 'px';
+				acc[i].onclick = function() {
+					if(this.classList.contains("active")){
+					this.classList.remove("active");
+					var panel =this.nextElementSibling;
+					panel.style.maxHeight = null;
+					}
+					else{
+					var k;
+						for(k=0;k<acc.length;k++){
+							acc[k].classList.remove("active");
+							acc[k].nextElementSibling.style.maxHeight = null;
+						}
+						
+						this.classList.add("active");
+						var panel = this.nextElementSibling;
+						panel.style.maxHeight = panel.scrollHeight + 'px';
+					}
 				}
 			}
-			}
-			if (window.location.href.indexOf('#1')) {
+			
+		
+			if (window.location.href.indexOf('#1')>0) {
 					acc[0].classList.add("active");
 					var panel = acc[0].nextElementSibling;
-					var ht = document.getElementById('bat1');
 					panel.style.maxHeight = 3*panel.scrollHeight + 'px';
 
 				}
-				else if (window.location.href.indexOf('#2')){
+				else if (window.location.href.indexOf('#2')>0){
+					
 					acc[1].classList.add("active");
 					var panel = acc[1].nextElementSibling;
-					var ht = panel.scrollHeight;
-					panel.style.maxHeight = 2*panel.scrollHeight + 'px';
+
+					panel.style.maxHeight = 3*panel.scrollHeight + 'px';
 
 				}
-				else if (window.location.href.indexOf('#3')){
+				else if (window.location.href.indexOf('#3')>0){
 					acc[2].classList.add("active");
 					var panel = acc[2].nextElementSibling;
 					var ht = panel.scrollHeight;
 					panel.style.maxHeight = 3*panel.scrollHeight + 'px';
 
 				}
-				else if (window.location.href.indexOf('#4')){
+				else if (window.location.href.indexOf('#4')>0){
 					acc[3].classList.add("active");
 					var panel = acc[3].nextElementSibling;
 					var ht = panel.scrollHeight;
 					panel.style.maxHeight = 3*panel.scrollHeight + 'px';
 
 				}
-				else{}
+				else{
+					
+				}
 			
 			//END COLLAPSIBLE JS --------------------------------------------------------------------
 				// When the user clicks anywhere outside of the modal, close it
