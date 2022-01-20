@@ -41,7 +41,7 @@ html{
 
 }
 #navbar{
-	padding-top: 10%;
+	padding-top: 7.5%;
 	font-size:1.25em;
 	
 }
@@ -402,7 +402,16 @@ h3 a:hover{
 	transition: max-height 0.2s ease-out;
 	background-color: rgb(250,250,250);
   }
-  
+.banner{
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	height:72.5vh;
+	
+	}
+.pictureframe{
+	background-color: white;
+}
 @media screen and (max-width: 600px){
 	.content{
 		max-height:100;
