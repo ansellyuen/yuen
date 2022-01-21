@@ -411,8 +411,8 @@ h3 a:hover{
   
   .content {
 	padding: 0 2vw 0 1vw;
-	margin-left: 1vw;
-	margin-bottom: 1vw;
+	margin-left: 1.5vw;
+	margin-bottom: 1.5vw;
 	border-left: 2px dashed;
 	
 	max-height: 0;
