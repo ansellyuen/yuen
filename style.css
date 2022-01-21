@@ -88,15 +88,16 @@ body p{
 
 /* resume css */
 #resumeframe{
-	padding-top: 4em;
+	padding-top: 2em;
 	padding-bottom: 2em;
 	text-align: center;
 }
-
-#preintro{
-	margin-top:2.5em;
-	
+#resumeframe img{
+	height:70vh;
+	width: auto;
 }
+
+
 
 #name{
 	
@@ -113,24 +114,19 @@ body p{
 #name p:hover{
 	color:#90C7E3;
 }
-#liin{
-	padding-left: 0.25em;
-	background-color: inherit;
-	width: 20px;
+#prompt{
+	padding-top: 1em;
+	font-size: xx-large;
 }
 #intro{
-
+	margin-top: 1.5em;
 	display:flex;
-	flex-direction: row;
-	text-align: left;
-	padding-bottom: 2em;
+	flex-direction: column;
+
 	padding-top: 1em;
 	font-family: 'Nunito Sans';
 }
-#intro div{
-	width: fit-content;
-	padding-right: 2em;
-}
+
 #intro .row{
 	background-color: rgb(240, 240, 240);
 	display: flex;
@@ -138,48 +134,50 @@ body p{
 	justify-content: space-between;
 }
 #intro .column{
-	background-color: rgb(250, 250, 250);
-}
-#intro #rcol{
 	background-color: rgb(240, 240, 240);
 	display: flex;
 	flex-direction: column;
-	align-items:flex-start;
+	padding-right: 0em;
+}
+
+#intro #rcol h5{
+	
+	margin-top:auto;
+	
+	margin-left:4em;
 	text-align: left;
+	
+
+	
 }
 
 .highlights{
 	background: rgb(250,250,250);
+	padding:0.5em;
+	margin: 1em;
+	margin-left: 0em;
+	margin-right: 0em;
+}
+.highlights div{
+	background-color: inherit;
 	padding: 1em;
 }
 .highlights h1, .highlights h2, .highlights h3{
 	background: inherit;
-	padding-left: 1em;
+	
 }
 .highlights h3{
 	font-family:'Raleway', sans-serif;
 }
-#rcol .highlights{
-	width: 100%;
-}
 
-#major{
-	margin-bottom: 1em;
-}
-#minor{
-	margin-top: 1em;
-}
-#major, #minor{
-	padding: 0em;
-	padding-top: 1em;
-}
+
 #pagecontainer{
 	position: relative;
 	min-height: 75vh;
 }
 #plinks_row{
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	width: 100%;
 }
 #plinks{
@@ -189,12 +187,12 @@ body p{
 	
 }
 #plinks .highlights{
-	margin-right: 2em;
+	margin-left: 2em;
 	padding: 0;
 	
 }
-#plinks .highlights:last-child{
-	margin-right: 0em;
+#plinks .highlights:first-child{
+	margin-left: 0em;
 }
 #plinks a{
 	background-color:rgb(240, 240, 240);
@@ -204,7 +202,17 @@ body p{
 	display: inline-block;
 	transition: 0.5s ease;
 }
-#plinks img:hover{
+
+#plinks #fs:hover{
+	background-color: #19194A;
+}
+#plinks #np:hover{
+	background-color: #ED1C24;
+}
+#plinks #sjh:hover{
+	background-color: #FFBAF5;
+}
+#plinks #tor:hover{
 	background-color: #90C7E3;
 }
 #plinks img{
@@ -220,17 +228,17 @@ body p{
 }
 #stamp{
 	display: flex;
-	flex-direction: row-reverse;
-	align-self: flex-end;
+	flex-direction: row;
+	align-self: center;
 	width: 100%;
 	
 }
 #stamp img{
-	align-self:center;
-	width: 156px;
+
+	width: 152px;
 }
 #plinks img:hover{
-	opacity:100;
+	opacity: 100;
 }
 footer{
 	position: relative;
@@ -245,7 +253,10 @@ footer{
 	
 }
 /* portfolio */
-
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
 hr{
 	width: 0;
 	margin: 1em;
