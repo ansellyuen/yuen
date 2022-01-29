@@ -73,9 +73,7 @@ html{
 	#headflex{
 		max-width: 100%;
 	}
-	#navbar{
-		
-	}	
+
 
 }
 body p{
@@ -88,14 +86,11 @@ body p{
 
 /* resume css */
 #resumeframe{
-	padding-top: 2em;
+	padding-top: 5em;
 	padding-bottom: 2em;
 	text-align: center;
 }
-#resumeframe img{
-	height:70vh;
-	width: auto;
-}
+
 
 
 
@@ -119,7 +114,7 @@ body p{
 	font-size: xx-large;
 }
 #intro{
-	margin-top: 1.5em;
+	margin-top: 3em;
 	display:flex;
 	flex-direction: column;
 
@@ -310,9 +305,7 @@ h3 a:hover{
 	height: auto;
 	background-color: rgb(250,250,250);
 }
-.flexbox{
-	background-color:red;
-}
+
 .flexcontainer{
 	padding-top: 5%;
 	display: flex;
@@ -410,8 +403,8 @@ h3 a:hover{
   }
   
   .content {
-	padding: 0 2vw 0 1vw;
-	margin-left: 1.5vw;
+	padding: 0 2vw 0 2vw;
+	margin-left: 2vw;
 	margin-bottom: 1.5vw;
 	border-left: 2px dashed;
 	
@@ -444,6 +437,9 @@ video{
 	max-width: 100%;
 
 }
+.rcol video{
+	cursor: pointer;
+}
 .content img{
 	max-width: 100%;
 }
@@ -452,31 +448,42 @@ video{
 	width: 25%;
   }
   
+#toggle{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
   /* The Modal (background) */
-  .modal, .sjh-modal {
-	display: none;
+  .modal{
+	display: block;
 	position: fixed;
 	z-index: 1;
 	padding-top: 0;
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 100%;
+	height: 0;
 	overflow: auto;
 	background-color: rgba(0, 0, 0, 0.8);
-
+	opacity:0%;
+	transition: opacity 0.1s ease-in-out;
   }
   
   /* Modal Content */
-  .modal-content, .sjh-model-content {
+  .modal-content{
 	position: relative;
-	background-color: #fefefe;
+	background-color: rgb(250, 250, 250);
 	margin: auto;
+	margin-top: 5%;
+	border-radius: 4vh;
 	padding: 0;
 	width: 90%;
 	max-width: 1200px;
-	height:90%;
+	height:75%;
 	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
   }
   
   /* The Close Button */
@@ -500,16 +507,13 @@ video{
   
   /* Hide the slides by default */
   .mySlides {
-	  background-color: white;
+	  background-color: rgb(250, 250, 250);
 		display: none;
 		position:relative;
 		text-align:center;
   }
-  .mySlides img{
-	  width: 800px;
-	  
-	  
-	  
+#fs_demo{
+	width: 75%;
   }
   @media screen and (max-width: 600px) {
 	  .mySlides img{
@@ -524,26 +528,31 @@ video{
 	top: 50%;
 	width: auto;
 	padding: 16px;
+	margin: 1vw;
 	margin-top: -50px;
-	color: white;
+	color: black;
 	font-weight: bold;
 	font-size: 20px;
 	transition: 0.6s ease;
-	border-radius: 0 3px 3px 0;
+	border-radius: 0.25vw;
 	user-select: none;
 	-webkit-user-select: none;
+	background-color: #FF000000;
+
   }
   
   /* Position the "next button" to the right */
   .next {
 	right: 0;
-	border-radius: 3px 0 0 3px;
+	
+	
   }
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: #999;
+	color: #FFFFFF
   }
   img.demo {
 	opacity: 0.6;
@@ -555,7 +564,7 @@ video{
 	opacity: 1;
   }
   
-  img.hover-shadow {
+  .hover-shadow {
 	transition: 0.3s;
   }
   

@@ -6,7 +6,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 		<link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
 		<link rel="stylesheet" href="../style.css">
-		<title>Ansell Yuen</title>
+		<title>Ansell Yuen - Portfolio</title>
 		<link rel="shortcut icon" type="image/ico" href="../resources/favicon.ico"/>
         <!-- navbar -->
 		<div id="headflex">
@@ -33,11 +33,12 @@
 	<body>
 		<!-- body -->
 		<div id="pagecontainer">
+			
 			<div class="flexbox">
 				<div class="flexcontainer">
 					<section id="flowstate">
-						<div class="flexitem" id="tab4">
-							<button type="button" class="collapsible">Flowstate</button>
+						<div class="flexitem">
+							<button type="button" id="tab1" class="collapsible">Flowstate</button>
 							<div class="content">
 														
 								<div class="row">
@@ -91,14 +92,15 @@
 												<h3><img src="resources/link.png" class="link"><a href="https://www.figma.com/proto/GOZqgyWWAg55JCpxAVdOgI/Flowstate">Check out the Figma demo!</a></h3>
 									</div>
 									<div class="column rcol">
-										<video autoplay muted loop>
+										<video autoplay muted loop onclick="openModal();currentSlide(1)" class="hover-shadow">
 											<source src="resources/flowstate_demo2.mp4">
 										Your browser does not support the video tag.
 										</video>
 										<hr>
 										<hr>
-										<video autoplay muted loop>
+										<video autoplay muted loop onclick="openModal();currentSlide(2)" class="hover-shadow">
 											<source src="resources/flowstate_demo1.mp4">
+											Your browser does not support the video tag.
 										</video>
 								
 									</div>
@@ -116,7 +118,7 @@
 													
 								<div class="row">
 									<div class="column">
-									<h3>Student Researcher</h3>
+									<h3>UX Researcher</h3>
 									</div>
 									<div class="column rcol">
 									<h3>March 2021 - May 2021</h3>
@@ -168,7 +170,7 @@
 					</section>
 					<section id="hyphy">
 						<div class="flexitem" >
-							<button type="button" id="tab1" class="collapsible">San Jose Hyphy</button>
+							<button type="button" id="tab2" class="collapsible">San Jose Hyphy</button>
 							<div class="content">
 								<div class="row">
 									<div class="column">
@@ -227,7 +229,7 @@
 							</div>
 						</div>
 					</section>
-
+<!--
 					<section id="torleado">
 						<div class="flexitem" >
 							<button type="button" id="tab2" class="collapsible">Torleado</button>
@@ -274,7 +276,7 @@
 							</div>
 						</div>
 					</section>
-
+-->
 					
 					
 					
@@ -287,7 +289,22 @@
 				<div id="modal-content" class="modal-content">
 								
 					<!-- LIGHTBOX-->
-
+					<span class="group">
+						<div class="mySlides">
+							<video autoplay muted loop id="fs_demo">
+								<source src="resources/flowstate_demo2.mp4">
+							Your browser does not support the video tag.
+							</video>
+						</div>
+					
+						<div class="mySlides">
+							<video autoplay muted loop onclick="openModal();currentSlide(1)">
+								<source src="resources/flowstate_demo1.mp4">
+							Your browser does not support the video tag.
+							</video>
+						</div>
+						
+					</span>
 						<span class="group">
 							<div class="mySlides">
 								<img src="resources/600_pw.jpg" >
@@ -305,27 +322,7 @@
 								<img src="resources/600_bandana.jpg" >
 							</div>
 						</span>
-						<span class="group">
-							<div class="mySlides">
-								
-								<img src="resources/torleado_palm.jpg">
-							</div>
-						
-							<div class="mySlides">
-								
-								<img src="resources/torleado_wave.jpg">
-							</div>
-						
-							<div class="mySlides">
-								
-								<img src="resources/torleado_sunset.jpg" >
-							</div>
-						
-							<div class="mySlides">
-								
-								<img src="resources/torleado_surfboard.jpg" >
-							</div>
-							</span>	
+							
 						<!-- Next/previous controls -->
 						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
 						<a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -407,24 +404,29 @@
 				}
 			
 			//END COLLAPSIBLE JS --------------------------------------------------------------------
-				// When the user clicks anywhere outside of the modal, close it
+			
+			
+			// When the user clicks anywhere outside of the modal, close it
 
 				var modal = document.getElementById('myModal');
 				window.onclick = function(event) {
 				if (event.target == modal) {
-					modal.style.display="none";
+					modal.style.opacity="0%";
+					modal.style.height="0";
 					}
 				}
 				
 				// Open the Modal
 				function openModal() {
-					document.getElementById('myModal').style.display = "block";
+					document.getElementById('myModal').style.opacity = "100%";
+					document.getElementById('myModal').style.height = "100%";
 				}
 				
 				// Close the Modal
 				function closeModal() {
 				
-					document.getElementById('myModal').style.display = "none";
+					document.getElementById('myModal').style.opacity = "0";
+					document.getElementById('myModal').style.height = "0";
 					
 				}
 				
