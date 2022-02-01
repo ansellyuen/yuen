@@ -102,7 +102,7 @@ body p{
 	color:#90C7E3;
 }
 #prompt{
-	padding-top: 1em;
+	
 	font-size: xx-large;
 	font-weight: 700;
 }
@@ -263,18 +263,24 @@ hr{
 }
 h2{
 	background-color: inherit;
-	font-family: 'Nunito Sans';
-	font-weight: 200;
+	
+
 	padding: 0px;
 	margin: 0px;
 
 
 
 }
+h4{
+	background-color: inherit;
+	font-family: 'Nunito Sans';
+	font-weight: 550;
+	margin:0;
+}
 h3{
 	background-color: inherit;
 	font-family: 'Nunito Sans';
-	font-weight: 200;
+	
 	padding: 0px;
 	margin: 0px;
 	
