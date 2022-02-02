@@ -127,12 +127,14 @@ body p{
 	flex-direction: column;
 	padding-right: 0em;
 }
-
+#intro .row .column:first-of-type{
+	flex:100%
+}
 #intro  h5{
 	
 	margin-top:auto;
 	
-	margin-left:2em;
+	
 	text-align: left;
 	
 
@@ -143,12 +145,14 @@ body p{
 	background: rgb(250,250,250);
 	padding:0.5em;
 	margin: 1em;
-	margin-left: 0em;
-	margin-right: 0em;
+	margin-left: 0;
+	margin-right: 0;
 }
 .highlights div{
 	background-color: inherit;
 	padding: 1em;
+	
+	
 }
 .highlights h1, .highlights h2, .highlights h3{
 	background: inherit;
@@ -166,7 +170,7 @@ body p{
 }
 #plinks_row{
 	display: flex;
-	flex-direction: row-reverse;
+	flex-direction: row;
 	width: 100%;
 }
 #plinks{
@@ -175,11 +179,7 @@ body p{
 	
 	
 }
-#plinks .highlights{
-	margin-left: 2em;
-	padding: 0;
-	
-}
+
 #plinks a{
 	background-color:rgb(240, 240, 240);
 	height: min-content;
@@ -187,6 +187,8 @@ body p{
 	overflow: hidden;
 	display: inline-block;
 	transition: 0.5s ease;
+	margin-right: 2em;
+	padding: 0;
 }
 
 #plinks #fs:hover{
@@ -202,7 +204,7 @@ body p{
 	background-color: #90C7E3;
 }
 #plinks img{
-	max-width: 7.5vw;
+	max-width: 7.1vw;
 	height: auto;
 	padding: 1em;
 	background-color: rgb(250, 250, 250);
@@ -215,7 +217,7 @@ body p{
 }
 #stamp{
 	display: flex;
-	flex-direction: row;
+	flex-direction: row-reverse;
 	align-self: center;
 	width: 100%;
 	
@@ -579,8 +581,10 @@ video{
 		overflow: hidden;
 	}
 	#intro .row{
-		flex-direction: column-reverse;
+		flex-direction: column;
+		
 	}
+
 	#plinks{
 		display: flex;
 		width: 100%;
